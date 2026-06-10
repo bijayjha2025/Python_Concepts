@@ -52,3 +52,11 @@ x +=1
 
 if id(x) != id(y):
     print("x and y are referencing different objects in memory.")
+
+
+#In Python, memory is divided into two main parts: Stack and Heap.
+'''
+The Stack is where method/function calls and reference variables are stored. It is a last-in-first-out (LIFO) data structure that manages the execution of functions and their local variables. When a function is called, a new frame is created on the stack to hold the function's local variables and parameters. When the function returns, its frame is removed from the stack. So, it is temporary and only available until function or method call is running.
+
+On the other hand, the Heap is where actual objects and values are stored. When a variable is created, Python allocates its object/value in the heap. The heap is a larger area of memory that can grow and shrink dynamically as needed. Objects stored in the heap can be accessed from anywhere in the program, and they persist until they are no longer referenced and garbage collected. It happens at runtime and objects in HM can be shared among multiple functions or exists even after a function has finished executing. Data structures like lists, dictionaries, and custom objects are stored in the heap.
+'''
