@@ -107,3 +107,20 @@ print(type(frozenset1))
 bytes1 = b"Hello"
 print(bytes1)
 print(type(bytes1))
+
+#Bytearray (bytearray) => It is a mutable sequence of bytes, which is used to represent binary data. For example:
+bytearray1 = bytearray(b"Hello")
+print(bytearray1)
+print(type(bytearray1))
+
+'''
+Ordered vs Unordered Data Types
+In Python, data types can also be classified as ordered or unordered based on whether the elements in the data type have a specific order or not.
+1. Ordered Data Types: These are data types where the elements have a specific order, and we can access them using their index. Examples include lists, tuples, and strings. For instance, in a list, the first element is at index 0, the second element is at index 1, and so on.
+2. Unordered Data Types: These are data types where the elements do not have a specific order, and we cannot access them using their index. Examples include sets and dictionaries. For instance, in a set, the elements are not stored in any particular order, and we cannot access them using an index. In a dictionary, the key-value pairs are also not stored in any particular order, and we access the values using their corresponding keys rather than an index.
+
+'''
+
+'''
+Python is a dynamically typed language, meaning that we do not need to declare the data type of a variable when we create it. A same variable can hold different types of data at different times during execution.
+'''
