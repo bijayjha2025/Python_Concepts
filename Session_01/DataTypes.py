@@ -124,3 +124,10 @@ In Python, data types can also be classified as ordered or unordered based on wh
 '''
 Python is a dynamically typed language, meaning that we do not need to declare the data type of a variable when we create it. A same variable can hold different types of data at different times during execution.
 '''
+
+
+
+#id() function => It is a built-in function in Python that returns the unique identifier of an object.
+
+xid = 101
+print(id(xid))
