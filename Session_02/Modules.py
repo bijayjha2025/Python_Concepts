@@ -95,3 +95,10 @@ cowsay.kitty("Hello, I'm a kitty!")
 cowsay.meow("Hello, I'm a meow!")
 
 
+'''
+Pip (Package Installer for Python) is a package manager for Python that allows you to install and manage additional libraries and dependencies that are not included in the standard library. It is the most commonly used tool for installing external modules in Python.
+
+General syntax for installing a package using pip is:
+python -m pip install packageName
+'''
+
