@@ -53,11 +53,15 @@ string = "Psychology is the scientific study of the mind and behavior."
 print(string.find("World")) #returns the index of the first occurrence of "World"
 print(string.find("Python")) #returns -1 if the substring is not found
 
-# b. count() => This returns the number of occurrences of a specified substring in a string. general syntax: string.count(substring)
+# b. rfind() => This returns the index of the last occurrence of a specified substring in a string. general syntax: string.rfind(substring)
+print(string.rfind("the")) #returns the index of the last occurrence of "the"
+
+
+# c. count() => This returns the number of occurrences of a specified substring in a string. general syntax: string.count(substring)
 print(string.count("o")) #returns the number of occurrences of "o" in the string
 print(string.count("l")) #returns the number of occurrences of "l" in the string
 
-# c. string indexing => This allows us to access individual characters in a string using their index. general syntax: string[index]
+# d. string indexing => This allows us to access individual characters in a string using their index. general syntax: string[index]
 
 string = "Hello World"
 print(string[0]) #accessing the first character
@@ -69,15 +73,15 @@ print(string[6:11]) #accessing a substring from index 6 to 10
 print(string[:5]) #accessing a substring from the beginning to index 4
 print(string[6:]) #accessing a substring from index 6 to the end
 
-# d. startswith() => This checks if a string starts with a specified substring. general syntax: string.startswith(substring)
+# e. startswith() => This checks if a string starts with a specified substring. general syntax: string.startswith(substring)
 print(string.startswith("Hello")) #returns True if the string starts with "Hello"
 print(string.startswith("World")) #returns False if the string does not start with "World"
 
-# e. endswith() => This checks if a string ends with a specified substring. general syntax: string.endswith(substring)
+# f. endswith() => This checks if a string ends with a specified substring. general syntax: string.endswith(substring)
 print(string.endswith("World")) #returns True if the string ends with "World"
 print(string.endswith("Hello")) #returns False if the string does not end with "Hello"
 
-# f. isalpha() => This checks if all characters in a string are alphabetic. general syntax: string.isalpha()
+# g. isalpha() => This checks if all characters in a string are alphabetic. general syntax: string.isalpha()
 print(name.isalpha()) #returns True if all characters in the string are alphabetic
 
 name6 = "Hello123"
@@ -101,6 +105,14 @@ print(test2.rstrip())
 
 test3 = "Hello World"
 print(test3.replace("World", "Class 12"))
+
+# e. removeprefix() => This removes a specified prefix from the beginning of a string. general syntax: string.removeprefix(prefix)
+test4 = "Hello World"
+print(test4.removeprefix("Hello ")) #removes "Hello " from the beginning of the string
+
+# f. removesuffix() => This removes a specified suffix from the end of a string. general syntax: string.removesuffix(suffix)
+test5 = "Hello World"
+print(test5.removesuffix(" World")) #removes " World" from the end of the string
 
 # 4. Splitting and joining
 
