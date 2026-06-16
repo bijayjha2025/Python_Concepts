@@ -24,3 +24,20 @@ myDictionary.clear() #removes all items from the dictionary
 print(myDictionary)
 myDictionary.update({"name": "Bijay", "subject": "CS", "address": "Itahari", "isStudent": True, "marks": [85, 90, 95]}) #updates the dictionary with the key-value pairs from another dictionary
 print(myDictionary)
+
+
+#Nested Dictionary => A dictionary that contains another dictionary as a value is called a nested dictionary. We can access the values in a nested dictionary by using multiple keys.
+
+student = {
+    "name": "Bijay",
+    "age": 20,
+    "subjects": {
+        "math": 85,
+        "science": 90,
+        "english": 95
+    },
+    "isStudent": True
+}
+
+print(student["subjects"]["math"]) #accesses the value associated with the key "math" in the nested dictionary "subjects"
+print(student.get("subjects").get("science")) #accesses the value associated with the key "science" in the nested dictionary "subjects" using the get() method

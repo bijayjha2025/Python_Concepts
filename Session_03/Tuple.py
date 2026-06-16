@@ -23,3 +23,20 @@ print(myList)
 
 myTuple = tuple(myList) #converts the modified list back to a tuple
 print(myTuple, type(myTuple))
+
+#In Tuple, we can also find maximum and minimum values using max() and min() functions respectively.
+print(max(myTuple)) #returns the maximum value in the tuple
+print(min(myTuple)) #returns the minimum value in the tuple
+
+print(sum(myTuple)) #returns the sum of all the values in the tuple
+print(sorted(myTuple)) #returns a sorted list of the values in the tuple
+
+
+
+#Nested Tuple => A tuple that contains another tuple as an item is called a nested tuple. We can access the values in a nested tuple by using multiple indices.
+nestedTuple = (1, 2, (3, 4), 5) #tuple that contains another tuple as an item
+print(nestedTuple[2]) #accesses the nested tuple (3, 4)
+
+print(nestedTuple[2][0]) #accesses the first item (3) in the nested tuple (3, 4)
+print(nestedTuple[2][1]) #accesses the second item (4) in the nested tuple (3, 4)
+print(nestedTuple[2][0] + nestedTuple[2][1]) #adds the first and second items in the nested tuple (3 + 4 = 7)
