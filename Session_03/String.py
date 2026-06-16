@@ -62,4 +62,35 @@ print("Hello World".removesuffix(" World")) #removes the suffix ' World'
 s = 'Java, Python, C++, C, Rust, Go, JS'
 print(s.split(', ')) #splits the string into a list based on the delimiter ', '
 print(s.rsplit(', ', 2)) #splits the string into a list based on the delimiter ', ' from the right, with a maximum of 1 split
+print("Hello\nWorld".splitlines()) #splits the string into a list based on newline characters
+print(', '.join(['Java', 'Python', 'C++', 'C', 'Rust', 'Go', 'JS'])) #joins the list of strings into a single string with ', ' as the separator
 
+# Alignment and Formatting Methods: center, ljust, rjust, zfill, format
+print("Hello".center(20)) #centers the string within a field of width 20
+print("Hello".ljust(20)) #left-justifies the string within a field of width 20
+print("Hello".rjust(20)) #right-justifies the string within a field of width 20
+print("42".zfill(5)) #pads the string with zeros on the left to make it 5 characters long
+print("The value of pi is approximately {:.2f}".format(3.14159)) #formats the number 3.14159 to 2 decimal places
+
+# Checking start and end of string: startswith, endswith
+print("Hello World".startswith("Hello")) #True, string starts with 'Hello'
+print("Hello World".endswith("World")) #True, string ends with 'World'
+print("Hello World".startswith("World")) #False, string does not start with 'World'
+print("Hello World".endswith("Hello")) #False, string does not end with 'Hello'
+
+# Encoding methods: encode, decode
+print("Python".encode())
+
+
+#String formatting means inserting values into a string. There are several ways to format strings in Python, including using the % operator, the str.format() method, and f-strings (formatted string literals).
+
+#Using the % operator
+name = "Bijay"
+age = 20
+print("My name is %s and I am %d years old." % (name, age))
+
+#Using the str.format() method
+print("My name is {} and I am {} years old.".format(name, age))
+
+#Using f-strings (formatted string literals)
+print(f"My name is {name} and I am {age} years old.")
