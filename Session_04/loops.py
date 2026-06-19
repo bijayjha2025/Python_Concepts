@@ -35,3 +35,25 @@ for i in l1:
     print(i)
 else:
     print("Loop is completed.")
+
+
+# while loop: we use this to execute a block of code as long as a specified condition is true. It is used when we do not know the number of iterations beforehand.
+
+i = 0
+while i < 10:
+    print(i)
+    i += 1
+
+#In while loop, we need to make sure that the condition will eventually become false, otherwise it will lead to an infinite loop.
+
+
+i1 = 0
+while i1 < 5:
+    print(i1)
+    i1 += 1
+
+
+i3 = 5
+while i3 > 0:
+    print(i3)
+    i3 -= 1
