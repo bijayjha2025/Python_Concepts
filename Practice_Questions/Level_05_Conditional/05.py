@@ -37,3 +37,19 @@ if 'skills' in details:
         print("He is a full stack developer.")
     else:
         print("Unknown title.")
+
+
+# Check if the person is married or not, print 'he is married' if True, else print 'he is not married'
+if 'is_married' in details:
+    if details['is_married']:
+        print("He is married.")
+    else:
+        print("He is not married.")
+
+#Check if the person lives in Nepal, print 'he lives in Nepal' if True, else print 'he does not live in Nepal'
+if 'county' in details:
+    if details['county'] == 'Nepal':
+        print("He lives in Nepal.")
+    else:
+        print("He does not live in Nepal.")
+    
