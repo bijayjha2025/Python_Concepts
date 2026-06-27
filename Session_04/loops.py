@@ -57,3 +57,55 @@ i3 = 5
 while i3 > 0:
     print(i3)
     i3 -= 1
+
+
+
+#Break and continue statements: In Python, we can use the break statement to exit a loop prematurely, and the continue statement to skip the current iteration and move on to the next one.
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+for i in range(10):
+    if i == 5:
+        continue
+    print(i)
+
+
+#For loop with break and continue statements:
+for i in range(10):
+    if i == 5:
+        break
+    elif i == 3:
+        continue
+    print(i)
+
+# The range() function: The range() function is used to generate a sequence of numbers. It can take one, two, or three arguments. If one argument is provided, it generates numbers from 0 to that number (exclusive). If two arguments are provided, it generates numbers from the first argument to the second argument (exclusive). If three arguments are provided, it generates numbers from the first argument to the second argument (exclusive) with a step size of the third argument.
+
+print(list(range(10))) #This will generate numbers from 0 to 9
+print(list(range(1, 10))) #This will generate numbers from 1 to 9
+print(list(range(1, 10, 2))) #This will generate numbers from 1 to 9 with a step size of 2
+
+
+#They are used to generate a sequence of numbers, which can be useful in loops and other situations where we need to iterate over a range of values.
+
+#Using range with for loop:
+for i in range(5):
+    print(i)
+
+#Using range with while loop:
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+#They are also used in list comprehensions, which are a concise way to create lists in Python.
+l = [i for i in range(5)]
+print(l)
+
+
+#Pass statement: The pass statement is a null operation; it does nothing when executed. It is used as a placeholder in situations where a statement is syntactically required but no action is needed. For example, we can use the pass statement in loops, functions, classes, and conditional statements.
+
+for i in range(5):
+    pass #This is a placeholder for future code
