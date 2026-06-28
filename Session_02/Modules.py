@@ -102,3 +102,17 @@ General syntax for installing a package using pip is:
 python -m pip install packageName
 '''
 
+#Statistics module provides functions for calculating mathematical statistics of numeric data. It is part of the Python standard library and does not require any additional installation.
+
+
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+import statistics
+
+print(statistics.mean(data))  # mean gives the average of the data
+print(statistics.median(data))  # median gives the middle value of the data
+print(statistics.mode(data))  # mode gives the most frequently occurring value in the data
+print(statistics.stdev(data))  # stdev gives the standard deviation of the data
+print(statistics.variance(data))  # variance gives the variance of the data
+print(statistics.harmonic_mean(data))  # harmonic_mean gives the harmonic mean of the data
+print(statistics.geometric_mean(data))  # geometric_mean gives the geometric mean of the data
+print(statistics.quantiles(data, n=4))  # quantiles gives the quantiles of the data
