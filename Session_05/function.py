@@ -77,3 +77,53 @@ def greetUser(name, age=18):
     print("Hello,", name, "! You are", age, "years old.")
 
 greetUser(name="Bijay")  # Calling the function with only the name argument, age will take the default value of 18
+
+#Arbitrary number of arguments: In Python, we can define a function that can accept an arbitrary number of arguments using the *args syntax. This allows us to pass a variable number of arguments to the function, which will be received as a tuple. This is useful when we don't know in advance how many arguments will be passed to the function.
+
+def greetUsers(*names):
+    for name in names:
+        print("Hello,", name, "! Welcome to the world of functions!")
+
+greetUsers("Bijay", "John", "Alice")  # Calling the function with multiple arguments
+
+
+#Another example of arbitrary number of arguments
+def addNumbers(*numbers):
+    sum = 0
+    for number in numbers:
+        sum += number
+    return sum
+
+result = addNumbers(5, 10, 15, 20)  # Calling the function with multiple arguments and storing the returned value
+print("The sum of 5, 10, 15, and 20 is:", result)  # Printing the returned value
+
+
+#Default and arbitrary number of parameters
+def greetUsers(greeting, *names):
+    for name in names:
+        print(greeting, name)
+
+greetUsers("Hello", "Bijay", "John", "Alice")  # Calling the function with a greeting and multiple names
+
+
+#Dictionary unpacking: In Python, we can define a function that can accept an arbitrary number of keyword arguments using the **kwargs syntax. This allows us to pass a variable number of keyword arguments to the function, which will be received as a dictionary. This is useful when we don't know in advance how many keyword arguments will be passed to the function.
+
+def greetUsers(**user_info):
+    for key, value in user_info.items():
+        print(key + ":", value)
+
+greetUsers(name="Bijay", age=20, city="Kathmandu")  # Calling the function with multiple keyword arguments
+
+
+#Function as a parameter of another function: In Python, we can pass a function as an argument to another function. This allows us to create higher-order functions that can take other functions as input and apply them to data. This is useful for creating more flexible and reusable code.
+
+def squareNumber(num):
+    return num ** 2
+
+def applyFunction(func, num):
+    return func(num)
+
+result = applyFunction(squareNumber, 5)  # Calling the function with another function as an argument and storing the returned value
+print("The square of 5 is:", result)  # Printing the returned value
+
+
