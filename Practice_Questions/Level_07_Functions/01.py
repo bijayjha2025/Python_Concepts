@@ -40,3 +40,68 @@ def convert_celsius_to_fahrenheit(celsius):
 
 temperatureconverted = convert_celsius_to_fahrenheit(25)
 print(f"25°C is equivalent to {temperatureconverted}°F")
+
+
+
+# Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer.
+
+def checkSeason(month):
+    month = month.lower()  # Convert the input to lowercase for case-insensitive comparison
+
+    if month in ['september', 'october', 'november']:
+        return "Autumn"
+    elif month in ['december', 'january', 'february']:
+        return "Winter"
+    
+    elif month in ['march', 'april', 'may']:
+        return "Spring"
+    
+    elif month in ['june', 'july', 'august']:
+        return "Summer"
+    
+    else:
+        return "Invalid month. Please enter a valid month name."
+    
+result = checkSeason("March")
+print(f"March is in the {result} season.")
+
+# Write a function called calculate_slope which return the slope of a linear equation
+
+def calculateSlope(x1, y1, x2, y2):
+    if x2 - x1 == 0:
+        return "Slope is undefined (vertical line)."
+    slope = (y2 - y1) / (x2 - x1)
+    return slope
+
+slopeResult = calculateSlope(2, 3, 6, 6)
+print(f"The slope of the line passing through points (2, 3) and (6, 6) is: {slopeResult}")
+
+
+
+#Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, solve_quadratic_eqn.
+
+def solveQuadraticEquation(a, b, c):
+    discriminant = b**2 - 4*a*c
+
+    if discriminant > 0:
+        root1 = (-b + discriminant**0.5) / (2*a)
+        root2 = (-b - discriminant**0.5) / (2*a)
+        return root1, root2
+    
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root,
+
+    else:
+        return "No real roots."
+    
+
+
+# Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+
+def printList(inputList):
+    for element in inputList:
+        print(element)
+
+resultList = [1, 2, 3, 4, 5]
+printList(resultList)
