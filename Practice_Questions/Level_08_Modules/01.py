@@ -27,3 +27,18 @@ def userIdByGenByUser():
 
 userIds = userIdByGenByUser()
 print(f"Generated user IDs: {userIds}")
+
+
+# Write a function named rgb_color_gen. It will generate rgb colors (3 values ranging from 0 to 255 each).
+
+
+def rgbColorGen():
+    import random
+
+    r = random.randint(0, 255) #randint is a function in the random module that returns a random integer between the specified range (inclusive).
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
+
+color = rgbColorGen()
+print(f"Generated RGB color: {color}")
