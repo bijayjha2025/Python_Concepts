@@ -35,3 +35,30 @@ print(list)
 countries = ([[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]])
 flattenedCountries = [country for sublist in countries for country in sublist]
 print(flattenedCountries)
+
+
+'''
+Change the following list to a list of dictionaries:
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+'''
+
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+listOfDicts = [{'country': country[0], 'city': country[1]} for sublist in countries for country in sublist]
+print(listOfDicts)
+
+#Change the following list of lists to a list of concatenated strings: names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+concatenatedNames = [f"{name[0]} {name[1]}" for sublist in names for name in sublist]
+print(concatenatedNames)
+
+
+#Write a lambda function which can solve a slope or y-intercept of linear functions.
+slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1) if x2 != x1 else None
+y_intercept = lambda x, y, m: y - m * x
+
+slopeValue = slope(1, 2, 3, 4)
+print(f"Slope: {slopeValue}")
+
+yInterceptValue = y_intercept(1, 2, slopeValue)
+print(f"Y-Intercept: {yInterceptValue}")
