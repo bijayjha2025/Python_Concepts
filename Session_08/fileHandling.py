@@ -45,3 +45,24 @@ file = open('./Session_08/files/test.txt')
 linesall = file.read().splitlines()
 print(linesall, type(linesall))
 file.close()
+
+
+#Opening files for writing and updating
+with open('./Session_08/files/test1.txt', 'w') as file: #with automatically closes the file
+    file.write("This is a new line in the file.") #if not, it will create
+    file.write("\nThis is another line in the file.")
+    file.write("\nThis is yet another line in the file.")
+
+with open('./Session_08/files/test.txt', 'a') as file:
+    file.write("\nThis line is appended to the file.")
+    file.write("\nThis is another appended line.")
+
+#Deleting a file
+#If the file does not exist, it will raise a FileNotFoundError, so its better to check if the file exists before deleting it
+
+import os
+if os.path.exists('./Session_08/files/del.txt'):
+    os.remove('./Session_08/files/del.txt')
+    print("File deleted successfully.")
+else:
+    print("File does not exist.")

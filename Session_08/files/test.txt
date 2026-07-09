@@ -1,3 +1,9 @@
 this is a text file to perform various operation.
 This is another line of the code where I am including some random stuff to perform file handling operations.
 Now, I am adding the third line in this program.
+This line is appended to the file.
+This is another appended line.
+This line is appended to the file.
+This is another appended line.
+This line is appended to the file.
+This is another appended line.
