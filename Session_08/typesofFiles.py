@@ -10,7 +10,7 @@ Example of a JSON file:
     "city": "Biratnagar"
 }
 
-c. file with 
+c. file with csv extension: These files contain data in Comma-Separated Values (CSV) format, which is a simple text format for representing tabular data. Each line in a CSV file represents a row of data, and the values in each row are separated by commas. CSV files are commonly used for storing and exchanging data between applications, especially spreadsheets and databases. Examples include .csv files.
 
 '''
 
@@ -45,3 +45,30 @@ personDictionary = {
 
 with open('./Session_08/files/person.json', 'w') as jsonFile: #with automatically closes the file
     json.dump(personDictionary, jsonFile) #json.dump() method is used to write the dictionary to the JSON file
+
+
+import csv #csv module is used to work with CSV files in Python
+with open('./Session_08/files/person.csv', 'w', newline='') as cF:
+    csvWriter = csv.writer(cF, delimiter=',')
+    csvWriter.writerow(['Name', 'Department', 'Birth Year'])
+    csvWriter.writerow(['John Cena', 'Engineering', '1970'])
+    csvWriter.writerow(['Jane Doe', 'Marketing', '1985'])
+
+with open('./Session_08/files/person.csv', 'r', newline='') as cF:
+    csvReader = csv.reader(cF, delimiter=',')
+    lineCount = 0
+
+    for row in csvReader:
+        if lineCount == 0:
+            print(f'Column names are {", ".join(row)}')
+            lineCount += 1
+        else:
+            print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
+            lineCount += 1
+
+    print(f'Processed {lineCount} lines.')
+
+
+
+
+
