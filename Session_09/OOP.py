@@ -51,3 +51,59 @@ car1 = Car("Toyota", "Camry", 2020)
 print(car1.make)
 print(car1.model)
 print(car1.year)
+
+
+#Object methods: Object methods are functions that are defined inside a class and can be called on an object of that class. They can access and modify the attributes of the object.
+
+class Employee:
+    def __init__(self, name, position, salary):
+        self.name = name
+        self.position = position
+        self.salary = salary
+
+    def displayInfo(self):
+        print(f"Name: {self.name}")
+        print(f"Position: {self.position}")
+        print(f"Salary: {self.salary}")
+        
+        
+e = Employee("Kale", "Manager", 50000)
+print(e.displayInfo())
+
+
+#Object default methods: Object default methods are special methods that are automatically called by Python when certain operations are performed on an object. These methods have double underscores before and after their names, and they allow us to customize the behavior of our objects.
+
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def __str__(self):
+        return f"{self.title} by {self.author} ({self.year})"
+    
+
+book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", 1925)
+print(book1)
+book2 = Book("To Kill a Mockingbird", "Harper Lee", 1960)
+print(book2)
+
+
+#Method to modify class default methods: We can also modify the default methods of a class to customize the behavior of our objects. For example, we can modify the __str__() method to return a different string representation of our object.
+
+class Movie:
+    def __init__(self, title, director, year):
+        self.title = title
+        self.director = director
+        self.year = year
+
+    def __str__(self):
+        return f"{self.title} directed by {self.director} ({self.year})"
+    
+    def __repr__(self):
+        return f"Movie({self.title}, {self.director}, {self.year})"
+    
+movie1 = Movie("Inception", "Christopher Nolan", 2010)
+print(movie1)
+movie2 = Movie("The Dark Knight", "Christopher Nolan", 2008)
+print(movie2)

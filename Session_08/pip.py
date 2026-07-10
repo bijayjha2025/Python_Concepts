@@ -50,3 +50,11 @@ response = requests.get(url)
 print(response.status_code) #Printing the status code of the response
 print(response.json()) #Printing the JSON response from the URL
 print(type(response.json())) #Printing the type of the JSON response
+
+
+# Read this url and find the 10 most frequent words. romeo_and_juliet = 'http://www.gutenberg.org/files/1112/1112.txt'
+
+response = requests.get('http://www.gutenberg.org/files/1112/1112.txt')
+text = response.text
+print(text[:500])
+
